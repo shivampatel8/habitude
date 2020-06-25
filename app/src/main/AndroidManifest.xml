@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.habitude.admin.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:screenOrientation="portrait">
+
+        <activity android:name=".MainActivity" />
+        <activity android:name=".title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".customize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".template"
+            android:screenOrientation="portrait" />
+        <activity android:name=".current" />
+        <activity android:name=".list" />
+        <activity
+            android:name=".tips"
+            android:screenOrientation="portrait" />
+        <activity android:name=".settings" />
+        <activity
+            android:name=".inner_template"
+            android:screenOrientation="portrait" />
+        <activity android:name=".inner_list" />
+
+        <receiver android:name=".MyReciever1">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".MyNewIntentService"
+            android:exported="false" />
+
+        <activity android:name=".web"></activity>
+    </application>
+
+</manifest>
